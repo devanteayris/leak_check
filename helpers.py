@@ -173,25 +173,28 @@ def dehashed_domain_search(DESHASHED_KEY, domain) :
     data = data.strip()
     r_json=json.loads(str(data))
     print("[+] Checking:")
-    print("[+] Leaks: " + str(len(r_json["entries"])))
-    for i, leak in enumerate(r_json["entries"]) :
-        print("[+] Victim: " + str(i + 1))
-        if leak["email"] :
-            print("\t - " + BOLD + "Email: "+ str(leak["email"]) + " -> " + RED + "LEAKED" + ENDC)
-        if leak["username"] :
-            print("\t - " + BOLD + "Username: "+ str(leak["username"]) + " -> " + RED + "LEAKED" + ENDC)
-        if leak["password"] :
-            print("\t - " + BOLD + "Password: "+ str(leak["password"]) + " -> " + RED + "LEAKED" + ENDC)
-        if leak["hashed_password"] :
-            print("\t - " + BOLD + "Hashed Password: "+ str(leak["hashed_password"]) + " -> " + RED + "LEAKED" + ENDC)
-        if leak["name"] :
-            print("\t - " + BOLD + "Name: "+ str(leak["name"]) + " -> " + RED + "LEAKED" + ENDC)
-        if leak["vin"] :
-            print("\t - " + BOLD + "Vin: "+ str(leak["vin"]) + " -> " + RED + "LEAKED" + ENDC)
-        if leak["ip_address"] :
-            print("\t - " + BOLD + "IP Address: "+ str(leak["ip_address"]) + " -> " + RED + "LEAKED" + ENDC)
-        if leak["phone"] :
-            print("\t - " + BOLD + "Phone: "+ str(leak["phone"]) + " -> " + RED + "LEAKED" + ENDC)
-        if leak["obtained_from"] :
-            print("\t - " + BOLD + "Obtained From: "+ str(leak["obtained_from"]) + " -> " + RED + "LEAKED" + ENDC)
+    if r_json["entries"] :
+        print("[+] Leaks: " + str(len(r_json["entries"])))
+        for i, leak in enumerate(r_json["entries"]) :
+            print("[+] Victim: " + str(i + 1))
+            if leak["email"] :
+                print("\t - " + BOLD + "Email: "+ str(leak["email"]) + " -> " + RED + "LEAKED" + ENDC)
+            if leak["username"] :
+                print("\t - " + BOLD + "Username: "+ str(leak["username"]) + " -> " + RED + "LEAKED" + ENDC)
+            if leak["password"] :
+                print("\t - " + BOLD + "Password: "+ str(leak["password"]) + " -> " + RED + "LEAKED" + ENDC)
+            if leak["hashed_password"] :
+                print("\t - " + BOLD + "Hashed Password: "+ str(leak["hashed_password"]) + " -> " + RED + "LEAKED" + ENDC)
+            if leak["name"] :
+                print("\t - " + BOLD + "Name: "+ str(leak["name"]) + " -> " + RED + "LEAKED" + ENDC)
+            if leak["vin"] :
+                print("\t - " + BOLD + "Vin: "+ str(leak["vin"]) + " -> " + RED + "LEAKED" + ENDC)
+            if leak["ip_address"] :
+                print("\t - " + BOLD + "IP Address: "+ str(leak["ip_address"]) + " -> " + RED + "LEAKED" + ENDC)
+            if leak["phone"] :
+                print("\t - " + BOLD + "Phone: "+ str(leak["phone"]) + " -> " + RED + "LEAKED" + ENDC)
+            if leak["obtained_from"] :
+                print("\t - " + BOLD + "Obtained From: "+ str(leak["obtained_from"]) + " -> " + RED + "LEAKED" + ENDC)
+    else :
+        print("\t - " + GREEN + "No leaks found for " + domain + " " + ENDC)
     print(40*"=")
