@@ -163,7 +163,6 @@ def haveibeenpwned_search (HAVEIBEENPWNED_KEY) :
 # Copyright (c) 2020 @devanteayris
 def dehashed_domain_search(DESHASHED_KEY, domain) :
     print(40*"=")
-    r_json = "{\"balance\":93,\"entries\":[{\"id\":\"Tv5qHkpUtgNsrNqz3YmoxxK7Po2aW2W2VU6-\",\"email\":\"henry.kwan@risikotek.com\",\"username\":\"HenryKwan\",\"password\":\"\",\"hashed_password\":\"\",\"name\":\"\",\"vin\":\"\",\"address\":\"\",\"ip_address\":\"\",\"phone\":\"\",\"obtained_from\":\"Canva.com\"},{\"id\":\"Ldjwe8z145yBMQaXnprLgp-nvtwF4B8HwP5T\",\"email\":\"elke.biechele@risikotek.com\",\"username\":\"elke.biechele\",\"password\":\"\",\"hashed_password\":\"$2a$10$MZxOOHdvFDjU2uM33OwSJe0ClVRTZR0BXGooxtOlUYh1BoU3JK4aa\",\"name\":\"\",\"vin\":\"\",\"address\":\"\",\"ip_address\":\"\",\"phone\":\"\",\"obtained_from\":\"Canva.com\"}],\"success\":true,\"took\":\"142\u00B5s\",\"total\":2}"
     curl_url = "curl -s 'https://api.dehashed.com/search?query=" + str(domain) + "' -u " + str(DEHASHED_EMAIL) + ":" + str(DEHASHED_KEY) + "  -H 'Accept: application/json'"
     process = subprocess.Popen(
         curl_url,
