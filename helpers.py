@@ -197,4 +197,5 @@ def dehashed_domain_search(DESHASHED_KEY, domain) :
                 print("\t - " + BOLD + "Obtained From: "+ str(leak["obtained_from"]) + " -> " + RED + "LEAKED" + ENDC)
     else :
         print("\t - " + GREEN + "No leaks found for " + domain + " " + ENDC)
+        print("")
     print(40*"=")
