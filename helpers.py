@@ -3,7 +3,6 @@ from key import *
 import subprocess
 import requests
 import json
-import argparse
 from argparse import RawTextHelpFormatter
 import datetime
 from time import sleep
