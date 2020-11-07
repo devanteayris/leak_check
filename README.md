@@ -14,6 +14,12 @@ Install dependencies with pip:
 ```bash
 pip install -r requirements.txt
 ```
+
+Install Curl
+```bash
+sudo apt install curl
+```
+
 **Add your API keys to key.py or the tool will not work**
 ```python
 HAVEIBEENPWNED_KEY = 'haveibeenpwnedkey'
