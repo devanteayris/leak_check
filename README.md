@@ -15,7 +15,7 @@ Install dependencies with pip:
 pip install -r requirements.txt
 ```
 
-Install Curl
+Install Curl:
 ```bash
 sudo apt install curl
 ```
