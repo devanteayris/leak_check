@@ -12,7 +12,7 @@ git clone https://github.com/devanteayris/leak_check.git
 ```
 Install dependencies with pip:
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Install Curl:
